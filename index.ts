@@ -12,6 +12,8 @@ const port: number | string = process.env.PORT || 5000;
 
 clientRoutes(app);
 
+app.use(express.static("public"));
+
 app.set("views", `./views`);
 app.set("view engine", "pug");
 
